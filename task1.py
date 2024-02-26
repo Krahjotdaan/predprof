@@ -8,7 +8,7 @@ with open("game.txt", 'r', encoding='utf8') as fl:
 for line in data:
     tmp = line[2].split(':')
     if tmp[1] == '55':
-        print(f"У персонажа {line[1]} в игре {line[0]} нашлась ошибка с кодом: {line[2]}. Дата фиксации: {line[3]}")
+        print(f"У персонажа\t{line[1]}\tв игре\t{line[0]}\tнашлась ошибка с кодом:\t{line[2]}.\tДата фиксации:\t{line[3]}")
         line[2] = 'Done'
         line[3] = '0000-00-00'
 
