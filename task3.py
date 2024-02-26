@@ -1,6 +1,6 @@
 import csv
 
-with open("game.txt", 'r', encoding='utf8') as fl:
+with open("game.txt", 'r', encoding='utf8') as fl: # открытие файла
     data = list(csv.reader(fl, delimiter='$', quotechar='"'))
     data = data[1:]
 

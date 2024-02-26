@@ -1,7 +1,7 @@
 import csv
 
 
-with open("game.txt", 'r', encoding='utf8') as fl:
+with open("game.txt", 'r', encoding='utf8') as fl: # открытие файла
     data = list(csv.reader(fl, delimiter='$', quotechar='"'))
     data = data[1:]
 
@@ -16,6 +16,6 @@ ans = []
 for line in data:
     ans.append('$'.join(line) + '\n')
 
-with open("game_new.csv", 'w', encoding='utf8') as fl:
+with open("game_new.csv", 'w', encoding='utf8') as fl: # запись файла
     fl.write("GameName$characters$nameError$date")
     fl.writelines(ans)
